@@ -9,10 +9,12 @@ component('uploadSection', {
 
             $scope.gotMessage = false;
             $scope.message = {};
+            $scope.newVideo = {};
 
             $scope.addVideo = function(){
                 var form = document.getElementById('addVideoForm');
                 var formData = new FormData(form);
+
                 Video.add(formData, function(res) {
                     console.log('success');
                     $scope.gotMessage = true;
@@ -32,7 +34,7 @@ component('uploadSection', {
                         $scope.message.type = 'danger';
                     }
                     else{
-                        console.log('unknown');
+                        console.log(error);
                         $scope.message.msg = 'UNKNOWN ERROR';
                         $scope.message.type = 'danger';
                     }
