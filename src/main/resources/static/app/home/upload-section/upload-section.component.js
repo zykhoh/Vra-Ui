@@ -21,21 +21,14 @@ component('uploadSection', {
                     $scope.message.msg = 'Video uploaded and successfully added';
                     $scope.message.type = 'success';
                 }, function(error) {
-                    console.log('error');
                     $scope.gotMessage = true;
                     if (error.status == 404){
-                        console.log('404');
                         $scope.message.msg = 'Ops!!! Server Not Found';
-                        $scope.message.type = 'danger';
-                    }
-                    else if (error.status == 500){
-                        console.log('500');
-                        $scope.message.msg = 'Something wrong!!! Internal Server Error When uploading';
                         $scope.message.type = 'danger';
                     }
                     else{
                         console.log(error);
-                        $scope.message.msg = 'UNKNOWN ERROR';
+                        $scope.message.msg = error.data.message;
                         $scope.message.type = 'danger';
                     }
                 });
