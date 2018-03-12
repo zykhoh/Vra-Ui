@@ -18,7 +18,7 @@ public class WebConfig extends WebMvcConfigurerAdapter {
         registry.addResourceHandler("/img/**").addResourceLocations("classpath:/static/img/");
         registry.addResourceHandler("/video/**").addResourceLocations("classpath:/static/video/");
         registry.addResourceHandler("/home/zhuoyan/Vra/images/**").addResourceLocations("file:/home/zhuoyan/Vra/images/");
-        registry.addResourceHandler("/Users/zykhoh/Downloads/video/**").addResourceLocations("file:/Users/zykhoh/Downloads/video/");
+        registry.addResourceHandler("/Users/zykhoh/Downloads/Vra/**").addResourceLocations("file:/Users/zykhoh/Downloads/Vra/");
 
     }
 

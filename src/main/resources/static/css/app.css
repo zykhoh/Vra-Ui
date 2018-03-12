@@ -243,6 +243,10 @@
     padding-right: 32px;
 }
 
+.padding-bottom-32 {
+    padding-bottom: 32px;
+}
+
 
 /* -------------------  End of video-player component  ------------------ */
 
@@ -257,7 +261,7 @@
 }
 
 .shadow-bottom {
-    box-shadow: -5px 4px 6px 4px rgba(0,0,0,0.2), -3px 3px 4px 0px rgba(0,0,0,0.1);
+    box-shadow: -5px 4px 6px 4px rgba(0,0,0,0.2), -3px 3px 4px 0 rgba(0,0,0,0.1);
 }
 
 .font-size-24 {

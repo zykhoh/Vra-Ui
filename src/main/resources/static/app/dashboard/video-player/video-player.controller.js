@@ -8,9 +8,12 @@ angular
         $scope.videoPlayer = videojs('currentVideo');
         $scope.videos = Video.query(
             function (successResponse) {
-                $scope.video.videoUrl = successResponse[0].videoUrl;
-                $scope.video.name = successResponse[0].name;
-                console.log("video", $scope.video.videoUrl);
+                console.log("res", successResponse);
+                $scope.video.videoUrl = successResponse.content[0].videoUrl;
+                $scope.video.title = successResponse.content[0].title;
+                $scope.video.id = successResponse.content[0].id;
+                $scope.video.date = successResponse.content[0].date;
+                $scope.video.description = successResponse.content[0].description;
                 $scope.videoPlayer.src([
                     {type: "video/mp4", src: $scope.video.videoUrl}
                 ]);
