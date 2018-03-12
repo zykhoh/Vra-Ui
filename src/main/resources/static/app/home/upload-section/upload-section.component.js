@@ -16,7 +16,6 @@ component('uploadSection', {
                 var formData = new FormData(form);
 
                 Video.add(formData, function(res) {
-                    console.log('success');
                     $scope.gotMessage = true;
                     $scope.message.msg = 'Video uploaded and successfully added';
                     $scope.message.type = 'success';
